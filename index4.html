@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<! -- Woords-->
+<html lang="en">
+<head>
+	<title>HypeCity</title>
+	<link rel="ICON" href="Space-Shuttle-icon.ico" type="image/ico" />
+	<link rel="stylesheet" href="cssTest.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div class="header">
+<h1>CSS3 Examples</h1>
+</div>
+
+<div class="row">
+  <div class="column left">
+    <h2>Left Header</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  </div>
+  <div class="column right">
+    <h2>Right Header</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  </div>
+</div>
+
+<div id="grad1">
+All of the fun colors
+</div>
+
+<div class="col-2 menu">
+  <ul>
+    <li>The Flight</li>
+    <li>The City</li>
+    <li>The Island</li>
+    <li>The Food</li>
+  </ul>
+</div>
+
+<div class="col-8">
+  <h1>The City</h1>
+  <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+</body>
+
+<br>
+
+<div class="center">
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#" class="active">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+</div>
+<br>
+<hr>
+
+<div>
+<p class="oddfellow">Oddfellow Productions was founded in 2011 by Grant Smith and Jed Delaney. The two had already been working together for five years starting with the infamous BellyBoy. </p>
+<p class="oddfellow2">While at Michigan Tech Grant continued creating Oddfellow content with Grant Cam, Flow Files, and Reaching Out -- Plugging In </p>
+
+<form action="http://www.example.com/form/php" method="get">
+  <fieldset>
+    <legend>Interested in working with Oddfellow Productions? </legend>
+	<p><label class="title" for="name">Your Name:</label>
+	   <input type="text" name="name" id="name"><br />
+	   <label class="title" for="email">Your email: </label>
+	   <input type="text" name="email" id="email"></p>
+	<p><label class="title" for="location">Your City:</label>
+	   <select name="location" id="location">
+	   <option value="EL">East Lansing</option>
+	   <option value="Lsn">Lansing</option>
+	   <option value="Okm">Okemos</option>
+	   <option value="Wil">Williamston</option>
+	   <option value="Dwt">Dewitt</option>
+	   <option value="Hst">Haslett</option>
+	   <option value="Oth">Other</option>
+	   </select></p>
+  </fieldset>
+  <div class="submit"><input type="submit" value="Let's work together!"></div>
+
+</form>
+</div>
+<style>
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+    padding: 5px;
+    text-align: center;
+}
+
+.navigator {
+    padding: 10px;
+    text-align: center;
+	position:center;
+	bottom: 0;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+   padding: 10px;
+   float: left;
+   width: 40%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#grad1 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, blue, green); /* Standard syntax (must be last) */
+}
+</style>
+
+<style>
+.center {
+	margin: auto;
+    text-align: center;
+    display: table;
+    clear: both;
+	bottom: 0;
+	position: center;
+}
+
+.pagination {
+    display: inline-block;
+	float: center;
+	
+}
+
+.pagination a {
+    color: black;
+    padding: 4px 8px;
+    text-decoration: none;
+	transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+</style>
+
+<style>
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.menu ul {
+    list-style-type: none;
+	margin: 0;
+    padding: 15px;
+}
+.menu li {
+    padding: 6px;
+    margin-bottom: 5px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+    background-color: #0099cc;
+}
+
+</style>
+
+<br>
+<div class="navigator">
+<nav>
+  <a class="active" href="index.htm" target="_blank">Home</a></a>
+  <a href="index2.html" target="_blank">FF Piano</a>
+  <a href="index3.html" target="_blank">Yooper Yoggers</a>
+  <a href="index4.html">CSS3/XML</a>
+  <a href="index5.html" target="_blank">JavaScript</a>
+</nav></div>
+</html>

@@ -1,0 +1,100 @@
+<html>
+<head >
+	<title>HypeCity</title>
+	<link rel="ICON" href="Space-Shuttle-icon.ico" type="image/ico" />
+	<link rel="stylesheet" href="cssTest.css">
+</head>
+
+<div class="header">
+<h1>Transformations</h1>
+</div>
+
+<div class="transform"></div>
+<br>
+<div class="transform2"></div>
+<br>
+<div class="transformXY"></div>
+<br>
+
+<div class="flex-container id="content">
+  <div class="column1">
+    <img src="seanHayes.jpg">
+  </div>
+  <div class="column2">
+    <img src="codyHayes.jpg">
+  </div>
+  <div class="column3">
+    <img src="dillionSemasky.jpg">
+  </div>
+ </div>
+<br>
+ 
+<nav>
+  <a class="active" href="index.htm">Home</a>
+  <a href="index2.html" target="_blank">FF Piano</a>
+  <a href="index3.html" target="_blank">Yooper Yoggers</a>
+  <a href="index4.html" target="_blank">CSS3/XML</a>
+  <a href="index5.html" target="_blank">JavaScript</a>
+  <a href="index6.html">Transforms</a>
+</nav>
+
+</html>
+
+<style> 
+.transform {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+}
+.transform:hover {
+    width: 300px;
+}
+
+.transform2 {
+    width: 100px;
+    height: 100px;
+    background: green;
+    transition: height 2s;
+}
+.transform2:hover {
+    height: 300px;
+}
+
+.transformXY {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    transition: height 2s, width 2s;
+}
+
+.transformXY:hover {
+    height: 300px;
+	width: 300px;
+}
+
+#content{overflow: auto;
+        transition-timing-function: ease-out;
+		}
+
+.column1, .column2, .column3{
+  width: 33.3%;
+  float: left;
+  }
+.column3{margin-right: 0%}
+
+.column1:hover, .column2:hover, .column3:hover{
+  transition: width 1s;
+  width: 60%;
+  float: left;
+  }
+  
+.flex-container {
+    display: flex;
+}
+
+.flex-container img {
+    width: 100%;
+}
+  
+</style>

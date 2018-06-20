@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<LastName>Smith</LastName>
+		<FirstName>Grant</FirstName>
+		<Hometown>Williamston</Hometown>
+		<RagnarsRun>3</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Wright</LastName>
+		<FirstName>Sam</FirstName>
+		<Hometown>Williamston</Hometown>
+		<RagnarsRun>3</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Wright</LastName>
+		<FirstName>Courtney</FirstName>
+		<Hometown>Williamston</Hometown>
+		<RagnarsRun>4</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Eckert</LastName>
+		<FirstName>Zach</FirstName>
+		<Hometown>Battle Creek</Hometown>
+		<RagnarsRun>4</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Larsen</LastName>
+		<FirstName>William</FirstName>
+		<Hometown>Charlevoix</Hometown>
+		<RagnarsRun>4</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Manshaem</LastName>
+		<FirstName>Beccie</FirstName>
+		<Hometown>Rockford</Hometown>
+		<RagnarsRun>4</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Perigo</LastName>
+		<FirstName>Ross</FirstName>
+		<Hometown>Gull Lake</Hometown>
+		<RagnarsRun>3</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Furmanski</LastName>
+		<FirstName>Ellie</FirstName>
+		<Hometown>Eden Prairie</Hometown>
+		<RagnarsRun>2</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Wesoloski</LastName>
+		<FirstName>Colton</FirstName>
+		<Hometown>Ashwaubenon</Hometown>
+		<RagnarsRun>3</RagnarsRun>
+	</record>
+	<record>
+		<LastName>Downing</LastName>
+		<FirstName>Corey</FirstName>
+		<Hometown>Almont</Hometown>
+		<RagnarsRun>2</RagnarsRun>
+	</record>
+	<record/>
+	<record/>
+	<record/>
+	<record/>
+</data-set>

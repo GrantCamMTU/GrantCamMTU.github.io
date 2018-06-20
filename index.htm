@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<! -- Woords-->
+<html>
+<head >
+	<title>HypeCity</title>
+	<link rel="ICON" href="Space-Shuttle-icon.ico" type="image/ico" />
+	<link rel="stylesheet" href="cssTest.css">
+</head>
+
+<style>
+
+a.link {
+ color: green;
+ font-family: verdana;
+}
+</style>
+<div>
+
+<h1> My First Heading</h1>
+<form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+
+</div>
+<hr>
+<h3>My First Heading (3)</h3>
+<h4>My First Heading (4)</h4>
+<hr>
+<h5>My First Heading (5)</h5>
+<h6>My First Heading (6)</h6>
+<hr>
+
+<p title="I'm a Tim the tooltip-man Taylor">words</p>
+
+<a href="https://www.w3schools.com">This is a link</a> 
+<hr>
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142" title="HTML is fun"> 
+<hr>
+<h4>Netflix shows to watch</h4>
+<ul style="list-style-type:circle">
+  <li>House of Cards <input type="checkbox" name="netflix" value="cards"></li>
+  <li>Bloodline <input type="checkbox" name="netflix" value="blood"></li>
+  <li>Luther <input type="checkbox" name="netflix" value="luther"></li>
+  <li>The Crown <input type="checkbox" name="netflix" value="crown" checked></li>
+  <li>Black Mirror <input type="checkbox" name="netflix" value="mirror"></li>
+  <li>Stranger Things <input type="checkbox" name="netflix" value="strange" checked></li>
+  <li>Ozark<input type="checkbox" name="netflix" value="ozark" checked></li>
+  <li>Mindhunter <input type="checkbox" name="netflix" value="mind"></li>
+  <li>The 100 <input type="checkbox" name="netflix" value="hundred"></li>
+</ul>
+<hr>
+<h4>World Currencies</h4>
+<ul>
+  <li>&#163 - pound</li>
+  <li>$ - dollar</li>
+  <li>&#165 - yen</li>
+  <li>&#8364 - euro</li>
+  <li>&#164 - curren</li>
+  <li>&#8355 - franc </li>
+  <li>&#8358 - naira</li>
+  <li>&#8361 - won</li>
+  <li>&#8365 - kip</li>
+  <li>&#8366 - tugrik</li>
+  <li>&#8368 - german penny</li>
+  <li>&#8369 - peso</li>
+  <li>&#8371 - austral </li>
+ <li>&#8377 - indian rupee</li>
+  
+</ul>
+
+<hr>
+<a href="https://www.google.com/search?q=castles&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjTw5bwovPVAhVh74MKHQAmB84Q_AUICigB&biw=1280&bih=620" target="_blank">
+   <img src="neuschwanstein-castle.jpg" alt="HTML tutorial" style="width:45%;height:45%;border:0">
+</a>
+<br>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+What time is it?</button>
+<p id="demo"></p>
+
+<div class="w3-row-padding">
+
+<div class="redBorder">
+  <h2>London</h2>
+  <p>London is the capital of England.</p>
+  <p>It is the most populous city in the United Kingdom,
+  with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="redBorder">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p> 
+  <p>The Paris area is one of the largest population centers in Europe,
+  with more than 12 million inhabitants.</p>
+</div>
+
+<div class="redBorder">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+  <p>It is the center of the Greater Tokyo Area,
+  and the most populous metropolitan area in the world.</p>
+</div>
+</div>
+<hr>
+<form action="/action_page.php" autocomplete="on">
+  First name:<br>
+  <input type="text" name="firstname" value="Bleep">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Bloop">
+  <br>
+  User password:<br>
+  <input type="password" name="psw">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+<br>
+<button type="button" onclick="alert('I told you not to click me!!!!!')">Don't click me!</button>
+<br>
+<br>
+<form>
+  <fieldset>
+   <legend>Where would you like to go?</legend>
+   <input type="radio" name="choices" value="dw"> Discworld<br> <!Add JavaScript picture load here with align>
+   <input type="radio" name="choices" value="sk"> Seventh Kingdom<br>
+   <input type="radio" name="choices" value="dx"> Dimension X <br>
+     <input type="radio" name="choices" value="got"> Westeros<br>
+  </fieldset>
+</form>
+<br>
+
+<select name="Choose your race">
+	<option value="swim">Swim</option>
+	<option value="bike">Bike</option>
+	<option value="run">Run</option>
+
+</select>
+<hr>
+<form>
+<label for="birthday">What's you Birthday?:</label>
+<input type="date" name="birthday" />
+<input type="submit" value="Submit"/>
+</form>
+<hr>
+<details>
+<summary>Additional Info</summary>
+<p>Do I really care about this -- things to consider</p>
+</details>
+<br>
+<nav>
+  <a class="active" href="index.htm">Home</a>
+  <a href="index2.html" target="_blank">FF Piano</a>
+  <a href="index3.html" target="_blank">Yooper Yoggers</a>
+  <a href="index4.html" target="_blank">CSS3/XML</a>
+  <a href="index5.html" target="_blank">JavaScript</a>
+</nav>
+
+<script>
+// Check browser support
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+}
+</script>
+
+</body>
+<script language="JavaScript">
+	var artist="2Chainz";
+</script>
+
+
+</html> 

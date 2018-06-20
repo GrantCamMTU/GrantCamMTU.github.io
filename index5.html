@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<! -- Woords-->
+<html>
+<head >
+	<title>HypeCity</title>
+	<link rel="ICON" href="Space-Shuttle-icon.ico" type="image/ico" />
+	<link rel="stylesheet" href="cssTest.css">
+</head>
+
+<div class="header">
+<h1>JavaScript</h1>
+</div>
+<div class="javaScript">
+<script src="javaScriptTest.js"></script>
+</div>
+
+<h2>My CD Collection:</h2>
+<button type="button" onclick="loadXMLDoc()">
+Get my CD collection</button>
+
+<br><br>
+<table id="demo"></table>
+<p id="demo"></p>
+
+<script src="https://github.com/josdejong/mathjs">
+</script>
+
+<script>
+  function loadXMLDoc(){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "cd_catalog.xml", true);
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4) { //intentially leaving out this.status==200
+	  myFunction2(this);
+    }
+  };
+  xmlhttp.send();
+}
+
+function myFunction(xml) {
+  var x, i, xmlDoc, txt;
+  xmlDoc = xml.responseXML;
+  txt = "";
+  x = xmlDoc.getElementsByTagName("ARTIST");
+  //document.write(xml.responseText);
+  for (i = 0; i< x.length; i++) {
+    document.write(x[i].childNodes[0].nodeValue);
+    txt += x[i].childNodes[0].nodeValue + "<br>";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+function myFunction2(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
+  var x = xmlDoc.getElementsByTagName("CD");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+
+<br>
+<br>
+
+<nav>
+  <a class="active" href="index.htm">Home</a>
+  <a href="index2.html" target="_blank">FF Piano</a>
+  <a href="index3.html" target="_blank">Yooper Yoggers</a>
+  <a href="index4.html" target="_blank">CSS3/XML</a>
+  <a href="index5.html">JavaScript</a>
+</nav>
+
+</html>

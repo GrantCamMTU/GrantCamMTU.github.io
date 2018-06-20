@@ -1,0 +1,97 @@
+<html>
+<head >
+	<title>HypeCity</title>
+	<link rel="ICON" href="Space-Shuttle-icon.ico" type="image/ico" />
+	<link rel="stylesheet" href="cssTest.css">
+</head>
+
+<div class="header">
+<h1>Meet the Yooper Yogger Team</h1>
+</div>
+
+
+<div id='showRunner'></div><br>
+<input type="button" onclick="previous()" value="<<">
+<input type="button" onclick="next()" value=">>">
+<br>
+<div id='sortRunnerByYear'></div>
+<input type="button" onclick="previous()" value="1">
+<input type="button" onclick="next()" value="2">
+<input type="button" onclick="previous()" value="3">
+<input type="button" onclick="next()" value="4">
+<br>
+
+<script>
+var i = 0;
+var x;
+displayCD(i);
+
+function displayCD(i) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this, i);
+        }
+    };
+    xmlhttp.open("GET", "ragnar-data-set.xml", true);
+    xmlhttp.send();
+}
+
+function myFunction(xml, i) {
+    var xmlDoc = xml.responseXML; 
+    x = xmlDoc.getElementsByTagName("record");
+    document.getElementById("showRunner").innerHTML =
+    "Name: " +
+    x[i].getElementsByTagName("FirstName")[0].childNodes[0].nodeValue + " " +
+    x[i].getElementsByTagName("LastName")[0].childNodes[0].nodeValue +
+    "<br>Hometown: " + 
+    x[i].getElementsByTagName("Hometown")[0].childNodes[0].nodeValue +
+	"<br>Number of Ragnars run: " + 
+	x[i].getElementsByTagName("RagnarsRun")[0].childNodes[0].nodeValue;
+	document.getElementById("sortRunnerByYear").innerHTML =
+    "Name: " +
+    x[i].getElementsByTagName("FirstName")[0].childNodes[0].nodeValue + " " +
+    x[i].getElementsByTagName("LastName")[0].childNodes[0].nodeValue +
+    "<br>Hometown: " + 
+    x[i].getElementsByTagName("Hometown")[0].childNodes[0].nodeValue +
+	"<br>Number of Ragnars run: " + 
+	x[i].getElementsByTagName("RagnarsRun")[0].childNodes[0].nodeValue;
+}
+
+function next() {
+  if (i < x.length-1) i++; 
+  else i = 0;
+
+  displayCD(i);
+}
+
+function previous() {
+  if (i > 0) i--;
+  else i=x.length-1;
+
+  displayCD(i);
+}
+</script>
+
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+
+<br>
+<br>
+
+<nav>
+  <a class="active" href="index.htm">Home</a>
+  <a href="index2.html" target="_blank">FF Piano</a>
+  <a href="index3.html" target="_blank">Yooper Yoggers</a>
+  <a href="index4.html" target="_blank">CSS3/XML</a>
+  <a href="index5.html">JavaScript</a>
+</nav>
+
+</html>
